@@ -1,0 +1,42 @@
+docker container run --detach --publish 8081:80 --name nginx ngnix
+docker container run --detach --publish 8081:80 --name nginx nginx
+docker container run --detach --publish 3306:3306 --name db --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+
+
+
+docker container run --detach --publish 8081:80 --name nginx ngnix
+docker container run --detach --publish 8081:80 --name nginx nginx
+docker container run --detach --publish 3306:3306 --name db --env MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+
+
+docker container ls -a
+
+docker logs 08d | grep PASS
+
+
+
+docker container top nginx
+docker container inspect nginx
+docker container stats 
+docker container ls
+docker run -it -p 8086:80 --name proxy ngnix bash
+
+docker container start -ai proxy 
+
+
+docker network ls
+docker network inspect bridge
+docker container inspect db
+
+
+docker network inspect amn_nw bridge host | grep subnet
+
+docker network create --help
+docker network create --subnet 172.19.0.0/16 hwa_nw_adv
+docker network inspect amn_nw bridge host hwa_nw_adv | grep Subnet
+
+docker container run -it --rm centos:7 bash
+docker container ls
+docker container ls -a
+
+
